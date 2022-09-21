@@ -117,7 +117,7 @@ print(df.loc[[0, 1]])
 
 
 
-> 使用 **`loc`** 属性返回指定索引对应到某一行：
+> 使用 **`loc`** 属性返回指定**索引** 或 **条件** 对应的某一行：
 
 ```python
 import pandas as pd
@@ -131,6 +131,9 @@ df = pd.DataFrame(data, index = ["day1", "day2", "day3"])
 
 # 指定索引
 print(df.loc["day2"])
+
+# 指定条件
+df.loc[df['某个列名'] > '值']
 ```
 
 ### 替换
